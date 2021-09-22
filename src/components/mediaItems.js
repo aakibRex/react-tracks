@@ -1,5 +1,6 @@
 import React from 'react'
 import "../components/mediaitems.css"
+import {useState} from 'react';
 
 export const MediaItems = ({ song, onDelete }) => {
     let h4_style = {
@@ -9,12 +10,18 @@ export const MediaItems = ({ song, onDelete }) => {
         color: "gray",
     }
 
+    const [likes,setLikes] = useState(Number(song.like));
+    const getLikes = () =>{
+        const likeCount = Number(song.like)+1;
+        setLikes(likeCount);
+    }
+
     return (
 
                 <>
                 <div className="parent">
                     <div className="likes child">
-                        <p>{song.like} <button  type="button" className="btn btn-sm btn-primary">Like</button></p>
+                        <p>{likes} <button  type="button" className="btn btn-sm btn-primary" onClick={getLikes}>Like</button></p>
                     </div>
 
                     <div className="title child">
