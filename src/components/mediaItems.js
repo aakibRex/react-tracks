@@ -14,7 +14,7 @@ export const MediaItems = ({ song, onDelete }) => {
                 <>
                 <div className="parent">
                     <div className="likes child">
-                        <p>{song.like} likes</p>
+                        <p>{song.like} <button  type="button" className="btn btn-sm btn-primary">Like</button></p>
                     </div>
 
                     <div className="title child">
