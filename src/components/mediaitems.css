@@ -1,11 +1,36 @@
-/* .parent {
-    width : 100%;
-      height : 200px;
+.parent {
+      width : 70%;
+      height : 100px;
      
       display : inline-block;
-      margin : 30px auto
-  } */
-  /* .parent div {
+      margin : 30px auto;
+  }
+  .parent div {
     display : inline-block;
     width:30%;
-  } */
+    
+  }
+
+.title{
+  margin-left: 0;
+  position: relative; right: 100px;
+}
+.button{
+  position: relative; left: 900px; bottom: 60px;
+}
+
+.title h4{
+  font-size: 1.25rem;
+}
+@media only screen and (max-width: 768px) {
+  .title{
+    margin-left: 0;
+    position: relative; right: 50px;
+  }
+  .audio-bar{
+    position: relative; right:55px;
+  }
+  .button{
+    position: relative; left: 580px; bottom: 60px;
+  }
+}
