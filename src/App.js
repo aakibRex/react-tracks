@@ -21,7 +21,13 @@ function App() {
     setMedias([...results]);
   }
   const addMedia = (title, subtitle) => {
-    let sno = medias[medias.length - 1].sno + 1;
+    let sno;
+    if(medias.length!==0){
+    sno = medias[medias.length - 1].sno + 1;
+    }
+    else{
+      sno = 0;
+    }
     const newMedia = {
       sno: sno,
       like:0,
