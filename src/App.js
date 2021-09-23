@@ -35,7 +35,6 @@ function App() {
       desc: subtitle,
     }
     setMedias([...medias, newMedia]);
-    console.log(newMedia);
   }
   const [medias, setMedias] = useState([
     {
@@ -60,7 +59,6 @@ function App() {
   return (
 
     <>
-
       <Header title=" ReactTracks" />
       <Search search={search} />
       <Medias medias={medias} onDelete={onDelete} />

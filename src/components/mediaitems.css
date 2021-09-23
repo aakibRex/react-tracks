@@ -16,11 +16,27 @@
   position: relative; right: 100px;
 }
 .button{
-  position: relative; left: 900px; bottom: 60px;
+  position: relative; left: 900px; bottom: 75px;
 }
-
+.likes p{
+  position: relative; bottom: 20px;
+}
 .title h4{
   font-size: 1.25rem;
+}
+/* Style buttons */
+.btn-del {
+  background-color: DodgerBlue; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn-del:hover {
+  background-color: red;
 }
 @media only screen and (max-width: 768px) {
   .title{
@@ -31,6 +47,6 @@
     position: relative; right:55px;
   }
   .button{
-    position: relative; left: 580px; bottom: 60px;
+    position: relative; right: 500px; bottom: 60px;
   }
 }
