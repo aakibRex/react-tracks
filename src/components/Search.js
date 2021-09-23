@@ -18,7 +18,7 @@ export const Search = ({search}) => {
         <div className="container" style={div_style}>
             <form className="d-flex" onSubmit={onsubmit}>
                 <input className="form-control me-2 search-box"  name="search" value={query} type="text" placeholder="Search" onChange={(e)=>{setQuery(e.target.value)}} aria-label="Search" />
-                <button className="btn btn-outline-success search-box" type="submit" >Search</button>
+                <button className="btn btn-dark search-box" type="submit" >Search</button>
             </form>
         </div>
     )

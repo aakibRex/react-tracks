@@ -24,7 +24,7 @@ export const MediaItems = ({ song, onDelete }) => {
                 <div class="card-body">
                     <div className="parent">
                         <div className="likes child">
-                            <p>{likes} <button type="button" className="btn btn-sm btn-primary" onClick={getLikes}>Like</button></p>
+                            <p><strong>{likes}</strong> <button type="button" className="btn btn-sm btn-primary" onClick={getLikes}>Like</button></p>
                         </div>
 
                         <div className="title child">
