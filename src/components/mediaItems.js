@@ -4,10 +4,10 @@ import { useState } from 'react';
 
 export const MediaItems = ({ song, onDelete }) => {
     const h4_style = {
-        color: "darkblue",
+        color: "white",
     }
     const p_style = {
-        color: "gray",
+        color: "blue",
     }
 
     const [likes, setLikes] = useState(Number(song.like));
