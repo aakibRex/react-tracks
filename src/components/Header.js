@@ -7,15 +7,13 @@ export default function Header(props) {
     }
     return (
         <div>
-
             <nav className="navbar  fixed-top " style={{backgroundColor:"black"}}>
                 <a class="navbar-brand" href="valuebound.com">
                     <img src="logo192.png" width="30" height="30" alt="logo"/>
                      <strong style={text_style}>{props.title}</strong>
                 </a>
-                {/* <span className="navbar-brand mb-0 h1">{props.title}</span> */}
+               {/* <span className="navbar-brand mb-0 h1">{props.title}</span> */}
             </nav>
-
         </div>
     )
 }

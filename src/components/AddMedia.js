@@ -10,6 +10,8 @@ export const AddMedia = (props) => {
             alert("title or subtitle cannot be blank");
         }
         props.addMedia(title,subtitle);
+        setTitle("");
+        setSubtitle("");
     }
     const text_style = {
         color:"white"

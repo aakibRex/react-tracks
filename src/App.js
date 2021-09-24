@@ -16,7 +16,7 @@ function App() {
   }
   const search = (query) => {
     let results = medias.filter(media => {
-      return media.title.includes(query);
+      return media.title.toLowerCase().includes(query.toLowerCase());
     })
     setMedias([...results]);
   }

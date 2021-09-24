@@ -1,3 +1,4 @@
+
 .parent {
       width : 70%;
       height : 100px;
@@ -11,7 +12,7 @@
     
   }
   .card-body{
-    background-image: linear-gradient(to bottom right, rgb(65, 206, 241), rgb(30, 226, 30));
+    background-image: linear-gradient(to bottom right, rgb(65, 206, 241), rgb(245, 56, 245));
   }
 
 .title{
@@ -25,24 +26,35 @@
   position: relative; bottom: 20px;
 }
 .title h4{
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 /* Style buttons */
 .btn-del {
   /* background-color: DodgerBlue; */
-  background-image: linear-gradient(to bottom right, rgb(233, 13, 50), red);
+  /* background-image: linear-gradient(to bottom right, rgb(233, 13, 50), red); */
+  background-color: transparent;
   border: none; /* Remove borders */
-  color: white; /* White text */
+  color: red; /* White text */
   padding: 12px 16px; /* Some padding */
-  font-size: 16px; /* Set a font size */
+  font-size: 25px; /* Set a font size */
   cursor: pointer; /* Mouse pointer on hover */
 }
 
 /* Darker background on mouse-over */
 .btn-del:hover {
-  background-color: red;
+   background-image: linear-gradient(to bottom right, rgb(233, 13, 50), red);
 }
 @media only screen and (max-width: 768px) {
+  body{
+    width: auto;
+  }
+  .parent div {
+    width:30%;
+    height: auto;
+  }
+  .card-body{
+    overflow: scroll;
+  }
   .title{
     margin-left: 0;
     position: relative; right: 50px;
@@ -51,6 +63,39 @@
     position: relative; right:55px;
   }
   .button{
-    position: relative; right: 500px; bottom: 60px;
+    position: relative; left: 550px; bottom: 85px;
   }
+}
+@media only screen and (max-width: 425px) {
+  .title{
+    margin-left: 0;
+    position: relative; left: 30px; bottom: 75px;
+  }
+  .audio-bar{
+    position: relative; bottom: 40px;
+  }
+  .button{
+    position: relative; left: 255px; bottom: 96px;
+  }
+  .btn-del{
+    font-size: 15px;
+  }
+  .likes{
+    position: relative; right: 50px;
+    margin-top: 5px;
+  }
+  .card-body {
+    width : auto;
+    height : auto;
+    overflow-y: scroll;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin :auto;
+}
+.parent div {
+  width:auto;
+  height: auto;
+}
 }
