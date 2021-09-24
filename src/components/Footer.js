@@ -1,12 +1,12 @@
 import React from 'react'
 
 export const Footer = () => {
-    let footerStyle = {
+    // defining style for footer as a JS object and storing it in a variable named footerstyle.
+    const footerStyle = {
         position: "relative",
         width: "100%",
         top: "30vh",
         backgroundColor:"black"
-        // backgroundImage: "linear-gradient(to bottom right, black, green)"
     }
     return (
         

@@ -8,18 +8,21 @@ import { Search } from "./components/Search";
 import React, { useState } from 'react';
 
 function App() {
-
+// function for deleting song.
   const onDelete = (song) => {
     setMedias(medias.filter((e) => {
       return e !== song;
     }))
   }
+  // function for search functionality. called in search.js with arguments as search text box input.
+  // can search song with title of the song.
   const search = (query) => {
     let results = medias.filter(media => {
       return media.title.toLowerCase().includes(query.toLowerCase());
     })
     setMedias([...results]);
   }
+  // function for adding a new song. called in AddMedia.js
   const addMedia = (title, subtitle) => {
     let sno;
     if(medias.length!==0){
@@ -36,6 +39,7 @@ function App() {
     }
     setMedias([...medias, newMedia]);
   }
+  // setting default values in medias array using react's state hook feature.
   const [medias, setMedias] = useState([
     {
       sno: 1,
@@ -57,7 +61,6 @@ function App() {
     },
   ]);
   return (
-
     <>
       <Header title=" ReactTracks" />
       <Search search={search} />

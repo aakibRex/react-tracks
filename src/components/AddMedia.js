@@ -2,6 +2,10 @@ import React from 'react'
 import {useState} from 'react';
 
 export const AddMedia = (props) => {
+    //  title and subtitle will hold the values coming from input text boxes viz. song's title input box
+    //  and song's subtitle input box. This input boxes have an onchange event as attributes where an arrow
+    //  function is defined which calls setTitle and setSubtitle function for changing the value of input 
+    //  boxes. React's state hook is used for carrying out these all stuffs.
     const [title,setTitle] = useState("");
     const [subtitle,setSubtitle] = useState("");
     const onsubmit = (e) => {
@@ -9,7 +13,10 @@ export const AddMedia = (props) => {
         if(!title||!subtitle){
             alert("title or subtitle cannot be blank");
         }
+        // calling the addMedia() function defined and imported from app.js using props with title and 
+        // subtitle as arguments which holds input text boxes data.
         props.addMedia(title,subtitle);
+        // setting the textboxes empty after add button is clicked.
         setTitle("");
         setSubtitle("");
     }
@@ -17,6 +24,7 @@ export const AddMedia = (props) => {
         color:"white"
     }
     return (
+        // this will render the form for song addition.
         <div className="container my-3">
             <h3 style={text_style}>Add a song</h3>
             <form onSubmit={onsubmit}>

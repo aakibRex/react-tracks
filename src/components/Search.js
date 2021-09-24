@@ -2,13 +2,16 @@ import React from 'react'
 import {useState} from 'react';
 
 export const Search = ({search}) => {
+    // query will store the search box input and initially it set empty.
     const [query,setQuery] = useState("");
     const onsubmit = (e) => {
         e.preventDefault();
         if(!query){
             alert("search field cannot be blank");
         }
+        // calling the search function defined in app.js with argument query which holds search box input.
         search(query);
+        setQuery("");
     }
     let div_style = {
         marginTop: "100px",

@@ -8,19 +8,19 @@ export default function Header(props) {
     return (
         <div>
             <nav className="navbar  fixed-top " style={{backgroundColor:"black"}}>
-                <a class="navbar-brand" href="valuebound.com">
+                <a className="navbar-brand" href="valuebound.com">
                     <img src="logo192.png" width="30" height="30" alt="logo"/>
                      <strong style={text_style}>{props.title}</strong>
                 </a>
-               {/* <span className="navbar-brand mb-0 h1">{props.title}</span> */}
             </nav>
         </div>
     )
 }
-
+// setting the type of title as string. 
 Header.propTypes = {
     title: PropTypes.string
 }
+// setting the default value of title which comes into action when no title is passed from medias.js to mediaitems.js.
 Header.defaultProps = {
     title: "Title here"
 }
